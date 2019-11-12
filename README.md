@@ -2,7 +2,7 @@
  Quick Tensorflow 2.0 implementation of [InfoGAN](https://arxiv.org/abs/1606.03657) trained on MNIST. Did this mainly to try out Tensorflow 2.0~  
 
 ## Training  
-![loss](imgs/GAN_loss.png])
+![loss](imgs/GAN_loss.png)
 ![training_process](imgs/infogan_mnist.gif)
 
 ## Varying categorical latent code
@@ -16,3 +16,8 @@
 
 ## Random Generation  
 ![random](imgs/random.png)
+
+## References  
+1. https://machinelearningmastery.com/how-to-develop-an-information-maximizing-generative-adversarial-network-infogan-in-keras/
+1. https://github.com/SeonbeomKim/TensorFlow-InfoGAN    
+1. https://github.com/eriklindernoren/PyTorch-GAN/blob/master/implementations/infogan/infogan.py
