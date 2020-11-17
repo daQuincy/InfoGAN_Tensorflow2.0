@@ -133,7 +133,7 @@ def train_step(images, step):
     gen_grd = gen_tape.gradient(gi, generator.trainable_variables + qnet.trainable_variables)
     dis_grd = dis_tape.gradient(di, discriminator.trainable_variables)
     
-    gen_opt.apply_gradients(zip(gen_grd, generator.trainable_variables))
+    gen_opt.apply_gradients(zip(gen_grd, generator.trainable_variables + qnet.trainable_variables))
     dis_opt.apply_gradients(zip(dis_grd, discriminator.trainable_variables))
     
     return gen_loss, dis_loss
