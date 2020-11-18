@@ -107,9 +107,11 @@ class QNet(tf.keras.Model):
         return z
     
     def call(self, x, training=True):
-        q = self.Qd(x)
-        q = self.Qb(x, training=training)
-        q = self.Qa(x)
+        x = self.Qd(x)
+        x = self.Qb(x, training=training)
+        x = self.Qa(x)
+        
+        q = x
         
         Q_cat = self.Q_cat(q)
 
